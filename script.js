@@ -8,6 +8,12 @@ function calculate() {
         }
         
         let result = eval(exp);
+        
+        if (result === undefined) {
+            document.getElementById("result").innerText = "Expression executed but returned no value";
+            return;
+        }
+        
         document.getElementById("result").innerText = "Result: " + result;
     } 
     catch (error) {
